@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Hello World LWC" icon-name="custom:custom14">
+      <div class="slds-m-around_medium">
+        <p>Hello, {greeting}!</p>
+        <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+      </div>
+      <br/>
+
+      <center>
+    <p class="slds-m-bottom_small">
+        <lightning-button label="Load Accounts" onclick={handleLoad}></lightning-button>
+    </p>
+</center>
+
+    <br/>
+
+    <template if:true={accounts}>
+        <template for:each={accounts} for:item="a">
+            &nbsp;<p key={a.Id}>{a.Name}</p>
+        </template>
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </template>
+
+    </lightning-card>
+
+  </template>
