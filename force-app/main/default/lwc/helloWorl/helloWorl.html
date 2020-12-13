@@ -23,6 +23,15 @@
         </template>
     </template>
 
+    <template if:true={account.data}>
+        <div class="slds-m-around_medium">
+            <p>Name: {name}</p>
+            <p>Industry: {industry}</p>
+            <p>Phone: <lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+            <p>Fax: <lightning-formatted-email value={fax}></lightning-formatted-email></p>
+        </div>
+    </template>
+
     </lightning-card>
 
   </template>
