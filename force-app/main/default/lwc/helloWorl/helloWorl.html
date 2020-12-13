@@ -6,11 +6,11 @@
       </div>
       <br/>
 
-      <center>
-    <p class="slds-m-bottom_small">
-        <lightning-button label="Load Accounts" onclick={handleLoad}></lightning-button>
-    </p>
-</center>
+    <center>
+        <p class="slds-m-bottom_small">
+            <lightning-button label="Load Accounts" onclick={handleLoad}></lightning-button>
+        </p>
+    </center>
 
     <br/>
 
@@ -31,6 +31,15 @@
             <p>Fax: <lightning-formatted-email value={fax}></lightning-formatted-email></p>
         </div>
     </template>
+
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>    
+    
 
     </lightning-card>
 
